@@ -39,6 +39,19 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
+    <script>
+      window.onload = function() {
+        var navmenu = document.getElementById('navmenu');
+        navmenu.addEventListener('click', function(e) {
+          if(e.target.tagName === 'A') {
+            e.preventDefault();
+            window.history.pushState({}, '', e.target.getAttribute('href').replace('#', '/'));
+            document.querySelector(e.target.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      }
+      </script>
+
     <!-- =======================================================
   * Template Name: Blue elegant marketing
   * Updated: Jun 20 2023 with Bootstrap v5.3.0
@@ -54,14 +67,11 @@
       <div
         class="container-fluid d-flex align-items-center justify-content-between"
       >
-        <a
-          href="index.html"
-          class="navbar-brand "
-        >
+        <a href="index.html" class="navbar-brand">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <img
             src="assets/img/LOGO_BE.png"
-            class="d-inline-block align-top "
+            class="d-inline-block align-top"
             alt=""
             id="logo"
           />
@@ -72,11 +82,11 @@
         <!-- Nav Menu -->
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html#hero" class="active">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#portfolio">Portfolio</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <!-- <li><a href="blog.html">Blog</a></li> -->
             <!-- <li class="dropdown has-dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="dd-box-shadow">
               <li><a href="#">Dropdown 1</a></li>
@@ -94,14 +104,14 @@
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li> -->
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
 
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
         <!-- End Nav Menu -->
 
-        <a class="btn-getstarted" href="index.html#about">Call Now</a>
+        <a class="btn-getstarted btn-get-hover"  href="index.html#about">Call Now</a>
       </div>
     </header>
     <!-- End Header -->
@@ -217,7 +227,7 @@
                 clients in Ahmedabad, India, and across the world, we are
                 dedicated to helping businesses grow both online and offline.
               </p>
-              <a href="#" class="read-more"
+              <a href="#" class="read-more btn-page-hover"
                 ><span>Call Now</span><i class="bi bi-arrow-right"></i
               ></a>
             </div>
@@ -368,7 +378,7 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link"
+                    <a  class="stretched-link"
                       >Search Engine Optimazation</a
                     >
                   </h4>
@@ -394,7 +404,7 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link"
+                    <a  class="stretched-link"
                       >Social Media Marketing</a
                     >
                   </h4>
@@ -421,7 +431,7 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link"
+                    <a  class="stretched-link"
                       >Pay-Per-Click Advertising (PPC)</a
                     >
                   </h4>
@@ -449,7 +459,7 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link"
+                    <a  class="stretched-link"
                       >Web Design & Development</a
                     >
                   </h4>
@@ -476,7 +486,7 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link"
+                    <a  class="stretched-link"
                       >Content Creation</a
                     >
                   </h4>
@@ -504,7 +514,7 @@
                 </div>
                 <div>
                   <h4 class="title">
-                    <a href="services-details.html" class="stretched-link"
+                    <a  class="stretched-link"
                       >Marketing Consultation</a
                     >
                   </h4>
@@ -559,7 +569,7 @@
                 marketing are essential to engage users and create a more
                 tailored user experience.
               </p>
-              <a href="#" class="btn btn-get-started">Call Now</a>
+              <a href="tel:+91 989 838 7685" class="btn btn-get-started btn-page-hover"  >Call Now</a>
             </div>
             <div
               class="col-lg-7 order-1 order-lg-2 d-flex align-items-center"
@@ -607,7 +617,7 @@
                 email marketing, content marketing, and influencer marketing, to
                 reduce reliance on a single method and ensure a broader reach.
               </p>
-              <a href="#" class="btn btn-get-started align-self-start"
+              <a href="#" class="btn btn-get-started align-self-start btn-page-hover"
                 >Call Now</a
               >
             </div>
@@ -1137,7 +1147,7 @@
                   first step towards achieving your marketing goals by booking a
                   free consultation call with our experts.
                 </p>
-                <a class="cta-btn" href="#">Call Now</a>
+                <a class="cta-btn btn-page-hover" href="#">Call Now</a>
               </div>
             </div>
           </div>
@@ -1146,7 +1156,7 @@
       <!-- End Call-to-action Section -->
 
       <!-- Testimonials Section - Home Page -->
-      <section id="testimonials" class="testimonials">
+      <!-- <section id="testimonials" class="testimonials">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
@@ -1205,7 +1215,7 @@
                   </div>
                   <!-- End testimonial item -->
 
-                  <div class="swiper-slide">
+                  <!-- <div class="swiper-slide">
                     <div class="testimonial-item">
                       <div class="d-flex">
                         <img
@@ -1240,10 +1250,10 @@
                         <i class="bi bi-quote quote-icon-right"></i>
                       </p>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- End testimonial item -->
 
-                  <div class="swiper-slide">
+                  <!-- <div class="swiper-slide">
                     <div class="testimonial-item">
                       <div class="d-flex">
                         <img
@@ -1279,10 +1289,10 @@
                         <i class="bi bi-quote quote-icon-right"></i>
                       </p>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- End testimonial item -->
 
-                  <div class="swiper-slide">
+                  <!-- <div class="swiper-slide">
                     <div class="testimonial-item">
                       <div class="d-flex">
                         <img
@@ -1316,10 +1326,10 @@
                         <i class="bi bi-quote quote-icon-right"></i>
                       </p>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- End testimonial item -->
 
-                  <div class="swiper-slide">
+                  <!-- <div class="swiper-slide">
                     <div class="testimonial-item">
                       <div class="d-flex">
                         <img
@@ -1358,15 +1368,15 @@
                         <i class="bi bi-quote quote-icon-right"></i>
                       </p>
                     </div>
-                  </div>
+                  </div> -->
                   <!-- End testimonial item -->
-                </div>
+                <!-- </div>
                 <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section>  -->
       <!-- End Testimonials Section -->
 
       <!-- Recent-posts Section - Home Page -->
@@ -1533,8 +1543,12 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="200">
                     <i class="bi bi-geo-alt"></i>
                     <h3>Address</h3>
-                    <p>A108 Adam Street</p>
-                    <p>New York, NY 535022</p>
+                    <div>
+                      <a href="https://maps.app.goo.gl/3Xv9hDVqfoqLTSZdA" target="_black" class="text-decoration-none text-dark">
+                        A2-513, CELEBRATION CITY CENTER, South Bopal, Ahmedabad, Gujarat
+                        380058
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -1543,8 +1557,16 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="300">
                     <i class="bi bi-telephone"></i>
                     <h3>Call Us</h3>
-                    <p>+1 5589 55488 55</p>
-                    <p>+1 6678 254445 41</p>
+                    <p><a
+                      href="tel:+91 989 838 7685"
+                      class="text-decoration-none text-dark"
+                      >+91 989 838 7685</p>
+                    <p><a
+                      href="tel:+91 968784 4720"
+                      class="text-decoration-none text-dark"
+                    >
+                   +91 968 784 4720</a
+                    ></p>
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -1553,8 +1575,9 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="400">
                     <i class="bi bi-envelope"></i>
                     <h3>Email Us</h3>
-                    <p>info@example.com</p>
-                    <p>contact@example.com</p>
+                    <a href="mailto:info@blueelegantmarketing.com" class="text-decoration-none text-dark" style="cursor:pointer;">info@blueelegantmarketing.com</a>
+                    <a href="mailto:work@blueelegantmarketing.com"class="text-decoration-none text-dark" style="cursor:pointer;">work@blueelegantmarketing.com</a>
+
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -1564,7 +1587,7 @@
                     <i class="bi bi-clock"></i>
                     <h3>Open Hours</h3>
                     <p>Monday - Friday</p>
-                    <p>9:00AM - 05:00PM</p>
+                    <p>10:00AM - 06:00PM</p>
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -1653,7 +1676,7 @@
               news, and success stories from our clients.
             </p>
             <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-twitter" inputmode="_blank"></i></a>
+              <a href="https://wa.me/919687844720?text=Hey" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
               <a
                 href="https://www.facebook.com/profile.php?id=100087108009453&mibextid=ZbWKwL"
                 target="_blank"
@@ -1698,29 +1721,45 @@
             class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
           >
             <h4>Contact Us</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p>United States</p>
+            <div>
+              <a href="https://maps.app.goo.gl/3Xv9hDVqfoqLTSZdA" terget="_blank" class="text-decoration-none text-dark">
+                A2-513, CELEBRATION CITY CENTER, South Bopal, Ahmedabad, Gujarat
+                380058
+              </a>
+            </div>
             <p class="mt-4">
-              <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+              <strong>Phone:</strong>
+              <a
+                href="tel:+91 989 838 7685"
+                class="text-decoration-none text-dark"
+                >+91 989 838 7685
+              </a>
+              <br />
+              <a
+                href="tel:+91 968784 4720"
+                class="text-decoration-none text-dark"
+              >
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+91 968
+                784 4720</a
+              >
             </p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>
+              <strong>Email:</strong>
+              <a
+                href="mailto:info@blueelegantmarketing.com"
+                class="text-decoration-none text-dark"
+                >info@blueelegantmarketing.com</a
+              >
+            </p>
           </div>
         </div>
       </div>
 
       <div class="container copyright text-center mt-4">
-        <p>
           &copy; <span>Copyright</span>
           <strong class="px-1">Blue Elegant Marketing</strong>
           <span>All Rights Reserved</span>
-        </p>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
         </div>
       </div>
     </footer>
