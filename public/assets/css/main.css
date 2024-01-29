@@ -91,7 +91,6 @@ section {
   width: 20vw;
   object-fit: contain;
 }
-
 @media (max-width: 950px) {
   #logo {
     width: 40vw;
@@ -169,11 +168,11 @@ section {
   font-weight: 600;
 }
 
-.page-title nav ol li+li {
+.page-title nav ol li + li {
   padding-left: 10px;
 }
 
-.page-title nav ol li+li::before {
+.page-title nav ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -333,7 +332,7 @@ section {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--color-nav-hover);
@@ -371,11 +370,11 @@ section {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--color-nav-dropdown-hover);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -387,7 +386,7 @@ section {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -421,7 +420,7 @@ section {
   }
 
   .navmenu .megamenu ul li a,
-  .navmenu .megamenu ul li:hover>a {
+  .navmenu .megamenu ul li:hover > a {
     padding: 10px 20px;
     font-size: 15px;
     color: var(--color-nav-dropdown);
@@ -433,7 +432,7 @@ section {
     color: var(--color-nav-dropdown-hover);
   }
 
-  .navmenu .megamenu:hover>ul {
+  .navmenu .megamenu:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -538,8 +537,8 @@ section {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active,
-  .navmenu .megamenu>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active,
+  .navmenu .megamenu > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -566,7 +565,7 @@ section {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -598,7 +597,6 @@ section {
   background-color: white;
   color: #ffffff;
 }
-
 .scroll-top i:hover {
   color: #000;
 }
@@ -1045,7 +1043,6 @@ section {
 }
 
 @media (max-width: 768px) {
-
   .about .icon-boxes .col-md-6:nth-child(2) .icon-box,
   .about .icon-boxes .col-md-6:nth-child(4) .icon-box {
     margin-top: 0px;
@@ -1190,12 +1187,12 @@ section {
   color: rgba(var(--color-default-rgb), 0.8);
 }
 
-.features .features-item+.features-item {
+.features .features-item + .features-item {
   margin-top: 100px;
 }
 
 @media (max-width: 768px) {
-  .features .features-item+.features-item {
+  .features .features-item + .features-item {
     margin-top: 40px;
   }
 }
@@ -1560,7 +1557,6 @@ section {
 }
 
 @media (max-width: 767px) {
-
   .testimonials .testimonials-carousel,
   .testimonials .testimonials-slider {
     overflow: hidden;
@@ -1796,7 +1792,6 @@ section {
 }
 
 @media (max-width: 575px) {
-
   .portfolio-details .swiper-button-prev,
   .portfolio-details .swiper-button-next {
     display: none;
@@ -1931,7 +1926,7 @@ section {
   background-color: var(--color-box-background);
 }
 
-.service-details .service-box+.service-box {
+.service-details .service-box + .service-box {
   margin-top: 30px;
 }
 
@@ -2225,7 +2220,7 @@ section {
   margin: 0;
 }
 
-.blog-details .meta-top ul li+li {
+.blog-details .meta-top ul li + li {
   padding-left: 20px;
 }
 
@@ -2284,7 +2279,7 @@ section {
   display: inline-block;
 }
 
-.blog-details .meta-bottom .tags li+li::before {
+.blog-details .meta-bottom .tags li + li::before {
   padding-right: 6px;
   color: var(--color-default);
   content: ",";
@@ -2312,7 +2307,7 @@ section {
   margin: 0;
 }
 
-.blog-details .sidebar .sidebar-item+.sidebar-item {
+.blog-details .sidebar .sidebar-item + .sidebar-item {
   margin-top: 40px;
 }
 
@@ -2365,7 +2360,7 @@ section {
   padding: 0;
 }
 
-.blog-details .sidebar .categories ul li+li {
+.blog-details .sidebar .categories ul li + li {
   padding-top: 10px;
 }
 
@@ -2600,15 +2595,4 @@ section {
 .blog-details .comments .reply-form .btn-primary:hover {
   color: var(--color-inverse);
   background-color: rgba(var(--color-primary-rgb), 0.8);
-}
-
-
-.btn-get-hover:hover {
-  background: white !important;
-  color: black !important;
-}
-
-.btn-page-hover:hover {
-  background: #131d41 !important;
-  color: white !important;
 }
