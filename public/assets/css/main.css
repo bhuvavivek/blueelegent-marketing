@@ -91,12 +91,39 @@ section {
   width: 20vw;
   object-fit: contain;
 }
+
+.call-now {
+  color: var(--color-inverse);
+  background: var(--color-primary);
+  font-size: 19px;
+  padding: 2px 15px;
+  margin: 13px 0 0 10px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+@media (max-width: 500px) {
+  .collam {
+    display: flex;
+    flex-direction: column;
+  }
+  .call-now {
+    width: fit-content;
+    color: var(--color-inverse);
+    background: var(--color-primary);
+    font-size: 19px;
+    padding: 4px 15px;
+    margin: 13px 0 0 0px;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+}
+
 @media (max-width: 950px) {
   #logo {
     width: 40vw;
   }
 }
-
 
 /*--------------------------------------------------------------
 # Section Title
@@ -597,6 +624,7 @@ section {
   background-color: white;
   color: #ffffff;
 }
+
 .scroll-top i:hover {
   color: #000;
 }
@@ -812,7 +840,15 @@ section {
   margin-top: 6px;
   font-size: 13px;
 }
-
+@media (max-width: 1200px) {
+  .footer .footer-about .logo {
+    line-height: 1;
+    margin-bottom: 25px;
+  }
+  .footer .footer-about .logo span {
+    font-size: 25px;
+  }
+}
 /*--------------------------------------------------------------
 # Home Page
 --------------------------------------------------------------*/
@@ -2595,4 +2631,14 @@ section {
 .blog-details .comments .reply-form .btn-primary:hover {
   color: var(--color-inverse);
   background-color: rgba(var(--color-primary-rgb), 0.8);
+}
+
+.btn-get-hover:hover {
+  background: white !important;
+  color: black !important;
+}
+
+.btn-page-hover:hover {
+  background: #131d41 !important;
+  color: white !important;
 }
